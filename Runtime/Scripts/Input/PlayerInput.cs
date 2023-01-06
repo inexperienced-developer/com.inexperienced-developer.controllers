@@ -1,18 +1,14 @@
 using UnityEngine;
 
-namespace InexperiencedDeveloper.Input
+namespace InexperiencedDeveloper.Controllers.Input
 {
     public class PlayerInput : MonoBehaviour
     {
         public PlayerInputActions InputActions { get; private set; }
 
-        private void Awake()
+        public void Init()
         {
             InputActions = new PlayerInputActions();
-        }
-
-        private void OnEnable()
-        {
             InputActions.Enable();
         }
 
@@ -20,6 +16,11 @@ namespace InexperiencedDeveloper.Input
         {
             InputActions.Disable();
         }
+
+        public Vector2 Move => InputActions.Player.Movement.ReadValue<Vector2>();
+        public Vector2 Look => InputActions.Player.Look.ReadValue<Vector2>();
+        public bool Sprint => InputActions.Player.Sprint.IsPressed();
+        public bool Jump => InputActions.Player.Jump.WasPressedThisFrame();
     }
 }
 
