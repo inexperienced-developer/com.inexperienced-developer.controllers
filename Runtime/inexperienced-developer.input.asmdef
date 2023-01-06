@@ -1,9 +1,8 @@
 {
-    "name": "inexperienced-developer.controllers",
+    "name": "inexperienced-developer.input",
     "rootNamespace": "",
     "references": [
-        "Unity.InputSystem",
-        "Unity.RenderPipelines.Universal.Runtime"
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
