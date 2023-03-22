@@ -1,6 +1,6 @@
 {
   "name": "com.inexperienced-developer.input",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "displayName": "Inexperienced Developer Input",
   "description": "A collection inputs and scripts using the new Input System",
   "unity": "2019.1",
